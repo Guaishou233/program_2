@@ -1,0 +1,124 @@
+[2025-02-28 03:24:51,587] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Using RTX 4000 series which doesn't support faster communication speedups. Ensuring P2P and IB communications are disabled.
+W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] 
+W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] *****************************************
+W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] *****************************************
+[2025-02-28 03:24:56,058] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 03:24:56,066] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 03:24:56,070] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 03:24:56,082] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 03:24:56,866] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-02-28 03:24:56,868] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-02-28 03:24:56,875] [INFO] [comm.py:652:init_distributed] cdb=None
+[2025-02-28 03:24:56,875] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: no
+ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+
+02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: no
+ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+
+02/28/2025 03:24:57 - INFO - __main__ - Training/evaluation parameters Namespace(dataset_name='xsum', dataset_config_name=None, train_file=None, validation_file=None, ignore_pad_token_for_loss=True, max_source_length=256, preprocessing_num_workers=16, overwrite_cache=False, max_target_length=64, val_max_target_length=320, num_beams=1, pad_to_max_length=True, model_name_or_path='/data/models/opt-1.3b', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=32, learning_rate=1e-06, weight_decay=0.01, num_train_epochs=1, max_train_steps=None, gradient_accumulation_steps=1, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, num_warmup_steps=0, warmup_ratio=0.06, output_dir='outputs/xsum/opt-6.7b/full_ft_lr1e-6_e1_bz8_wd0.01_seed43', seed=43, model_type=None, push_to_hub=False, hub_model_id=None, hub_token=None, trust_remote_code=False, checkpointing_steps=None, resume_from_checkpoint=None, with_tracking=False, report_to='all', offload_ratio=0.0)
+02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: no
+ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+
+[rank3]:[W228 03:24:57.516712230 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[2025-02-28 03:24:57,220] [INFO] [comm.py:652:init_distributed] cdb=None
+[rank0]:[W228 03:24:57.572145043 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank1]:[W228 03:24:57.584012842 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 4
+Process index: 2
+Local process index: 2
+Device: cuda:2
+
+Mixed precision type: no
+ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+
+[rank2]:[W228 03:24:57.840500964 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
+[rank0]:     main()
+[rank0]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
+[rank0]:     raw_datasets = load_from_disk(data_dir)
+[rank0]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
+[rank0]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
+[rank0]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
+[rank1]:     main()
+[rank1]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
+[rank1]:     raw_datasets = load_from_disk(data_dir)
+[rank1]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
+[rank1]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
+[rank1]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
+[rank2]:     main()
+[rank2]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
+[rank2]:     raw_datasets = load_from_disk(data_dir)
+[rank2]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
+[rank2]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
+[rank2]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
+[rank3]:     main()
+[rank3]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
+[rank3]:     raw_datasets = load_from_disk(data_dir)
+[rank3]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
+[rank3]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
+[rank3]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
+[rank0]:[W228 03:24:58.463896956 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0228 03:24:59.229000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 737568 closing signal SIGTERM
+W0228 03:24:59.230000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 737569 closing signal SIGTERM
+W0228 03:24:59.230000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 737570 closing signal SIGTERM
+E0228 03:24:59.396000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 737567) of binary: /home/tangqiansong/conda_file/envs/guaishou/bin/python
+Traceback (most recent call last):
+  File "/home/tangqiansong/conda_file/envs/guaishou/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+    args.func(args)
+  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1157, in launch_command
+    deepspeed_launcher(args)
+  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/launch.py", line 845, in deepspeed_launcher
+    distrib_run.run(args)
+  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+run_full_ft_summarization_ds.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-02-28_03:24:59
+  host      : bld
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 737567)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
