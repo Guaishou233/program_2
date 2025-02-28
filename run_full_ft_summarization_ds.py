@@ -396,7 +396,7 @@ def main():
         # Downloading and loading a dataset from the hub.
         # raw_datasets = load_dataset(args.dataset_name)
         # data_dir = '/data/peft_finetuning/data/summarization/' + args.dataset_name + '_dataset'
-        data_dir = '/data/hangyu/datasets/summarization/' + args.dataset_name + '_dataset'
+        data_dir = '/home/tangqiansong/program_2/data/' + args.dataset_name + '_dataset'
 
         raw_datasets = load_from_disk(data_dir)
     else:
@@ -925,5 +925,7 @@ def main():
         with open(os.path.join(args.output_dir, "all_results.json"), "w") as f:
             f.write(f"Best Metric: {all_results}")
         logger.info(f"Best Metric: {all_results}")
+
+        
 if __name__ == "__main__":
     main()

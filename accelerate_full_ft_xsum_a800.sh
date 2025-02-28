@@ -10,7 +10,7 @@ mkdir -p ${output_dir}
 log=${output_dir}/training.log
 
 CUDA_VISIBLE_DEVICES=1,2,3,4 accelerate launch run_full_ft_summarization_ds.py \
-  --model_name_or_path /data/models/opt-1.3b \
+  --model_name_or_path /home/tangqiansong/program_2/model/opt-6.7b \
   --dataset_name ${DATA_NAME} \
   --max_source_length 256 \
   --max_target_length 64 \
