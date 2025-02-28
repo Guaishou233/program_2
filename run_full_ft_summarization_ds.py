@@ -716,7 +716,7 @@ def main():
         accelerator.init_trackers("summarization_no_trainer", experiment_config)
 
     # Metric
-    metric = evaluate.load("/data/minping/code/efficient_masking_finetuning/rouge.py")
+    metric = evaluate.load("/home/tangqiansong/program_2/rouge.py")
 
 
     # Train!

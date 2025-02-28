@@ -1,110 +1,859 @@
-[2025-02-28 03:24:51,587] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 09:43:54,908] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
 Using RTX 4000 series which doesn't support faster communication speedups. Ensuring P2P and IB communications are disabled.
-W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] 
-W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] *****************************************
-W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0228 03:24:52.602000 737527 site-packages/torch/distributed/run.py:792] *****************************************
-[2025-02-28 03:24:56,058] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-02-28 03:24:56,066] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-02-28 03:24:56,070] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-02-28 03:24:56,082] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
-[2025-02-28 03:24:56,866] [INFO] [comm.py:652:init_distributed] cdb=None
-[2025-02-28 03:24:56,868] [INFO] [comm.py:652:init_distributed] cdb=None
-[2025-02-28 03:24:56,875] [INFO] [comm.py:652:init_distributed] cdb=None
-[2025-02-28 03:24:56,875] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
-02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
-Num processes: 4
-Process index: 3
-Local process index: 3
-Device: cuda:3
-
-Mixed precision type: no
-ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
-
-02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
-Num processes: 4
-Process index: 0
-Local process index: 0
-Device: cuda:0
-
-Mixed precision type: no
-ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
-
-02/28/2025 03:24:57 - INFO - __main__ - Training/evaluation parameters Namespace(dataset_name='xsum', dataset_config_name=None, train_file=None, validation_file=None, ignore_pad_token_for_loss=True, max_source_length=256, preprocessing_num_workers=16, overwrite_cache=False, max_target_length=64, val_max_target_length=320, num_beams=1, pad_to_max_length=True, model_name_or_path='/data/models/opt-1.3b', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=32, learning_rate=1e-06, weight_decay=0.01, num_train_epochs=1, max_train_steps=None, gradient_accumulation_steps=1, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, num_warmup_steps=0, warmup_ratio=0.06, output_dir='outputs/xsum/opt-6.7b/full_ft_lr1e-6_e1_bz8_wd0.01_seed43', seed=43, model_type=None, push_to_hub=False, hub_model_id=None, hub_token=None, trust_remote_code=False, checkpointing_steps=None, resume_from_checkpoint=None, with_tracking=False, report_to='all', offload_ratio=0.0)
-02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
-Num processes: 4
-Process index: 1
-Local process index: 1
-Device: cuda:1
-
-Mixed precision type: no
-ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
-
-[rank3]:[W228 03:24:57.516712230 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
-[2025-02-28 03:24:57,220] [INFO] [comm.py:652:init_distributed] cdb=None
-[rank0]:[W228 03:24:57.572145043 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
-[rank1]:[W228 03:24:57.584012842 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
-02/28/2025 03:24:57 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+W0228 09:43:56.070000 1018077 site-packages/torch/distributed/run.py:792] 
+W0228 09:43:56.070000 1018077 site-packages/torch/distributed/run.py:792] *****************************************
+W0228 09:43:56.070000 1018077 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0228 09:43:56.070000 1018077 site-packages/torch/distributed/run.py:792] *****************************************
+[2025-02-28 09:43:59,493] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 09:43:59,498] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 09:43:59,517] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 09:43:59,622] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-02-28 09:44:00,298] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-02-28 09:44:00,310] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-02-28 09:44:00,313] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-02-28 09:44:00,313] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2025-02-28 09:44:00,451] [INFO] [comm.py:658:init_distributed] cdb=None
+02/28/2025 09:44:00 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
 Num processes: 4
 Process index: 2
 Local process index: 2
 Device: cuda:2
 
-Mixed precision type: no
-ds_config: {'bf16': {'enabled': False}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+Mixed precision type: bf16
+ds_config: {'bf16': {'enabled': True}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
 
-[rank2]:[W228 03:24:57.840500964 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
-[rank0]:     main()
-[rank0]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
-[rank0]:     raw_datasets = load_from_disk(data_dir)
-[rank0]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
-[rank0]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
-[rank0]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
-[rank1]: Traceback (most recent call last):
-[rank1]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
-[rank1]:     main()
-[rank1]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
-[rank1]:     raw_datasets = load_from_disk(data_dir)
-[rank1]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
-[rank1]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
-[rank1]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
-[rank2]: Traceback (most recent call last):
-[rank2]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
+02/28/2025 09:44:00 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 4
+Process index: 1
+Local process index: 1
+Device: cuda:1
+
+Mixed precision type: bf16
+ds_config: {'bf16': {'enabled': True}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+
+02/28/2025 09:44:00 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 4
+Process index: 0
+Local process index: 0
+Device: cuda:0
+
+Mixed precision type: bf16
+ds_config: {'bf16': {'enabled': True}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+
+02/28/2025 09:44:00 - INFO - __main__ - Training/evaluation parameters Namespace(dataset_name='xsum', dataset_config_name=None, train_file=None, validation_file=None, ignore_pad_token_for_loss=True, max_source_length=256, preprocessing_num_workers=16, overwrite_cache=False, max_target_length=64, val_max_target_length=320, num_beams=1, pad_to_max_length=True, model_name_or_path='/home/tangqiansong/program_2/model/opt-6.7b', config_name=None, tokenizer_name=None, text_column=None, summary_column=None, use_slow_tokenizer=False, per_device_train_batch_size=8, per_device_eval_batch_size=32, learning_rate=1e-06, weight_decay=0.01, num_train_epochs=1, max_train_steps=None, gradient_accumulation_steps=1, lr_scheduler_type=<SchedulerType.LINEAR: 'linear'>, num_warmup_steps=0, warmup_ratio=0.06, output_dir='outputs/xsum/opt-6.7b/full_ft_lr1e-6_e1_bz8_wd0.01_seed43', seed=43, model_type=None, push_to_hub=False, hub_model_id=None, hub_token=None, trust_remote_code=False, checkpointing_steps=None, resume_from_checkpoint=None, with_tracking=False, report_to='all', offload_ratio=0.0)
+[rank1]:[W228 09:44:00.996986711 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank2]:[W228 09:44:00.001497490 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank0]:[W228 09:44:00.008983193 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+02/28/2025 09:44:00 - INFO - __main__ - Distributed environment: DEEPSPEED  Backend: nccl
+Num processes: 4
+Process index: 3
+Local process index: 3
+Device: cuda:3
+
+Mixed precision type: bf16
+ds_config: {'bf16': {'enabled': True}, 'optimizer': {'type': 'Adam', 'params': {'lr': 'auto', 'weight_decay': 'auto'}}, 'scheduler': {'type': 'WarmupDecayLR', 'params': {'warmup_min_lr': 'auto', 'warmup_max_lr': 'auto', 'warmup_num_steps': 'auto', 'total_num_steps': 'auto'}}, 'zero_optimization': {'stage': 3, 'sub_group_size': 8, 'offload_optimizer': {'device': 'cpu', 'pin_memory': True, 'ratio': 0.8}}, 'train_batch_size': 'auto', 'gradient_accumulations': 16, 'train_micro_batch_size_per_gpu': 'auto', 'prescale_gradients': False, 'gradient_accumulation_steps': 1, 'steps_per_print': inf, 'fp16': {'enabled': False}}
+
+[rank3]:[W228 09:44:00.174353659 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+loading configuration file /home/tangqiansong/program_2/model/opt-6.7b/config.json
+Model config OPTConfig {
+  "_name_or_path": "/home/tangqiansong/program_2/model/opt-6.7b",
+  "_remove_final_layer_norm": false,
+  "activation_dropout": 0.0,
+  "activation_function": "relu",
+  "architectures": [
+    "OPTForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 2,
+  "do_layer_norm_before": true,
+  "dropout": 0.1,
+  "enable_bias": true,
+  "eos_token_id": 2,
+  "ffn_dim": 16384,
+  "hidden_size": 4096,
+  "init_std": 0.02,
+  "layer_norm_elementwise_affine": true,
+  "layerdrop": 0.0,
+  "max_position_embeddings": 2048,
+  "model_type": "opt",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "pad_token_id": 1,
+  "prefix": "</s>",
+  "torch_dtype": "float16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 50272,
+  "word_embed_proj_dim": 4096
+}
+
+loading configuration file /home/tangqiansong/program_2/model/opt-6.7b/config.json
+Model config OPTConfig {
+  "_name_or_path": "/home/tangqiansong/program_2/model/opt-6.7b",
+  "_remove_final_layer_norm": false,
+  "activation_dropout": 0.0,
+  "activation_function": "relu",
+  "architectures": [
+    "OPTForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 2,
+  "do_layer_norm_before": true,
+  "dropout": 0.1,
+  "enable_bias": true,
+  "eos_token_id": 2,
+  "ffn_dim": 16384,
+  "hidden_size": 4096,
+  "init_std": 0.02,
+  "layer_norm_elementwise_affine": true,
+  "layerdrop": 0.0,
+  "max_position_embeddings": 2048,
+  "model_type": "opt",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "pad_token_id": 1,
+  "prefix": "</s>",
+  "torch_dtype": "float16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 50272,
+  "word_embed_proj_dim": 4096
+}
+
+loading file vocab.json
+loading file merges.txt
+loading file tokenizer.json
+loading file added_tokens.json
+loading file special_tokens_map.json
+loading file tokenizer_config.json
+loading file chat_template.jinja
+loading configuration file /home/tangqiansong/program_2/model/opt-6.7b/config.json
+Model config OPTConfig {
+  "_name_or_path": "/home/tangqiansong/program_2/model/opt-6.7b",
+  "_remove_final_layer_norm": false,
+  "activation_dropout": 0.0,
+  "activation_function": "relu",
+  "architectures": [
+    "OPTForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 2,
+  "do_layer_norm_before": true,
+  "dropout": 0.1,
+  "enable_bias": true,
+  "eos_token_id": 2,
+  "ffn_dim": 16384,
+  "hidden_size": 4096,
+  "init_std": 0.02,
+  "layer_norm_elementwise_affine": true,
+  "layerdrop": 0.0,
+  "max_position_embeddings": 2048,
+  "model_type": "opt",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "pad_token_id": 1,
+  "prefix": "</s>",
+  "torch_dtype": "float16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 50272,
+  "word_embed_proj_dim": 4096
+}
+
+loading configuration file /home/tangqiansong/program_2/model/opt-6.7b/config.json
+Model config OPTConfig {
+  "_name_or_path": "/home/tangqiansong/program_2/model/opt-6.7b",
+  "_remove_final_layer_norm": false,
+  "activation_dropout": 0.0,
+  "activation_function": "relu",
+  "architectures": [
+    "OPTForCausalLM"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 2,
+  "do_layer_norm_before": true,
+  "dropout": 0.1,
+  "enable_bias": true,
+  "eos_token_id": 2,
+  "ffn_dim": 16384,
+  "hidden_size": 4096,
+  "init_std": 0.02,
+  "layer_norm_elementwise_affine": true,
+  "layerdrop": 0.0,
+  "max_position_embeddings": 2048,
+  "model_type": "opt",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "pad_token_id": 1,
+  "prefix": "</s>",
+  "torch_dtype": "float16",
+  "transformers_version": "4.49.0",
+  "use_cache": true,
+  "vocab_size": 50272,
+  "word_embed_proj_dim": 4096
+}
+
+[2025-02-28 09:44:01,180] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+loading weights file /home/tangqiansong/program_2/model/opt-6.7b/pytorch_model.bin.index.json
+Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+[2025-02-28 09:44:01,193] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+[2025-02-28 09:44:01,193] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+[2025-02-28 09:44:01,193] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+Generate config GenerationConfig {
+  "bos_token_id": 2,
+  "eos_token_id": 2,
+  "pad_token_id": 1
+}
+
+[2025-02-28 09:44:02,223] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 517, num_elems = 6.86B
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.68s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.68s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.69s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.85s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 16.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 18.17s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 16.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 18.17s/it]
+All model checkpoint weights were used when initializing OPTForCausalLM.
+
+Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 16.66s/it]All the weights of OPTForCausalLM were initialized from the model checkpoint at /home/tangqiansong/program_2/model/opt-6.7b.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use OPTForCausalLM for predictions without further training.
+Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 18.17s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 16.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:36<00:00, 18.17s/it]
+loading configuration file /home/tangqiansong/program_2/model/opt-6.7b/generation_config.json
+Generate config GenerationConfig {
+  "bos_token_id": 2,
+  "eos_token_id": 2,
+  "pad_token_id": 1
+}
+
+You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 50265. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+[2025-02-28 09:44:39,156] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+02/28/2025 09:44:39 - INFO - __main__ - 10000
+02/28/2025 09:44:39 - INFO - __main__ - 11332
+02/28/2025 09:44:39 - INFO - __main__ - 11334
+[2025-02-28 09:44:39,159] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+02/28/2025 09:44:39 - INFO - accelerate.accelerator - Since you passed both train and evaluation dataloader, `is_train_batch_min` (here True will decide the `train_batch_size` (8).
+[2025-02-28 09:44:39,160] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.16.4, git-hash=unknown, git-branch=unknown
+[2025-02-28 09:44:39,160] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+[2025-02-28 09:44:39,163] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 4
+[2025-02-28 09:44:39,167] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+Using /home/tangqiansong/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+Emitting ninja build file /home/tangqiansong/.cache/torch_extensions/py310_cu118/cpu_adam/build.ninja...
+Building extension module cpu_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+Using /home/tangqiansong/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+ninja: no work to do.
+Using /home/tangqiansong/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+Loading extension module cpu_adam...
+Using /home/tangqiansong/.cache/torch_extensions/py310_cu118 as PyTorch extensions root...
+Time to load cpu_adam op: 2.5428810119628906 seconds
+Adam Optimizer #0 is created with AVX2 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+Emitting ninja build file /home/tangqiansong/.cache/torch_extensions/py310_cu118/cpu_adam/build.ninja...
+Building extension module cpu_adam...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: no work to do.
+Loading extension module cpu_adam...
+Time to load cpu_adam op: 2.5157363414764404 seconds
+Adam Optimizer #0 is created with AVX2 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+Loading extension module cpu_adam...
+Time to load cpu_adam op: 2.6121184825897217 seconds
+Adam Optimizer #0 is created with AVX2 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+Loading extension module cpu_adam...
+Time to load cpu_adam op: 2.607567548751831 seconds
+Adam Optimizer #0 is created with AVX2 arithmetic capability.
+Config: alpha=0.000001, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+[2025-02-28 09:44:43,013] [INFO] [logging.py:128:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adam as basic optimizer
+[2025-02-28 09:44:43,013] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-02-28 09:44:43,060] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2025-02-28 09:44:43,061] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2025-02-28 09:44:43,061] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2025-02-28 09:44:43,061] [INFO] [logging.py:128:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2025-02-28 09:44:43,212] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2025-02-28 09:44:43,212] [INFO] [utils.py:782:see_memory_usage] MA 3.39 GB         Max_MA 4.25 GB         CA 5.07 GB         Max_CA 5 GB 
+[2025-02-28 09:44:43,213] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 427.96 GB, percent = 42.5%
+[2025-02-28 09:44:43,214] [INFO] [stage3.py:170:__init__] Reduce bucket size 500000000
+[2025-02-28 09:44:43,214] [INFO] [stage3.py:171:__init__] Prefetch bucket size 50000000
+[2025-02-28 09:44:43,347] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2025-02-28 09:44:43,347] [INFO] [utils.py:782:see_memory_usage] MA 3.39 GB         Max_MA 3.39 GB         CA 5.07 GB         Max_CA 5 GB 
+[2025-02-28 09:44:43,347] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 427.96 GB, percent = 42.5%
+Parameter Offload: Total persistent parameters: 1712128 in 322 params
+[2025-02-28 09:44:43,494] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2025-02-28 09:44:43,494] [INFO] [utils.py:782:see_memory_usage] MA 3.1 GB         Max_MA 3.48 GB         CA 5.07 GB         Max_CA 5 GB 
+[2025-02-28 09:44:43,495] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 427.96 GB, percent = 42.5%
+[2025-02-28 09:44:43,629] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2025-02-28 09:44:43,630] [INFO] [utils.py:782:see_memory_usage] MA 3.1 GB         Max_MA 3.1 GB         CA 5.07 GB         Max_CA 5 GB 
+[2025-02-28 09:44:43,630] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 427.96 GB, percent = 42.5%
+[2025-02-28 09:44:45,542] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 516
+[2025-02-28 09:44:45,542] [INFO] [utils.py:782:see_memory_usage] MA 3.1 GB         Max_MA 3.1 GB         CA 3.1 GB         Max_CA 5 GB 
+[2025-02-28 09:44:45,543] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 428.51 GB, percent = 42.5%
+[2025-02-28 09:44:45,682] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2025-02-28 09:44:45,683] [INFO] [utils.py:782:see_memory_usage] MA 3.1 GB         Max_MA 3.1 GB         CA 3.1 GB         Max_CA 3 GB 
+[2025-02-28 09:44:45,683] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 429.15 GB, percent = 42.6%
+[2025-02-28 09:44:48,906] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2025-02-28 09:44:48,907] [INFO] [utils.py:782:see_memory_usage] MA 4.35 GB         Max_MA 4.38 GB         CA 4.4 GB         Max_CA 4 GB 
+[2025-02-28 09:44:48,907] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 448.34 GB, percent = 44.5%
+[2025-02-28 09:44:49,045] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2025-02-28 09:44:49,046] [INFO] [utils.py:782:see_memory_usage] MA 4.35 GB         Max_MA 4.35 GB         CA 4.4 GB         Max_CA 4 GB 
+[2025-02-28 09:44:49,046] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 449.99 GB, percent = 44.7%
+[2025-02-28 09:44:53,794] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2025-02-28 09:44:53,795] [INFO] [utils.py:782:see_memory_usage] MA 5.6 GB         Max_MA 5.6 GB         CA 5.62 GB         Max_CA 6 GB 
+[2025-02-28 09:44:53,795] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 477.19 GB, percent = 47.4%
+[2025-02-28 09:44:53,796] [INFO] [stage3.py:534:_setup_for_real_optimizer] optimizer state initialized
+[2025-02-28 09:45:01,422] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[2025-02-28 09:45:01,422] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[2025-02-28 09:45:01,422] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[2025-02-28 09:45:01,569] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2025-02-28 09:45:01,570] [INFO] [utils.py:782:see_memory_usage] MA 6.53 GB         Max_MA 7.3 GB         CA 7.32 GB         Max_CA 7 GB 
+[2025-02-28 09:45:01,570] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 493.5 GB, percent = 49.0%
+[2025-02-28 09:45:01,570] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2025-02-28 09:45:01,570] [WARNING] [lr_schedules.py:683:get_lr] Attempting to get learning rate from scheduler before it has started
+[2025-02-28 09:45:01,570] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2025-02-28 09:45:01,570] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x7f649c37ffa0>
+[2025-02-28 09:45:01,570] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[0], mom=[(0.9, 0.999)]
+[2025-02-28 09:45:01,571] [INFO] [config.py:1001:print] DeepSpeedEngine configuration:
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'intra_op_parallelism': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   amp_enabled .................. False
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   amp_params ................... False
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   bfloat16_enabled ............. True
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   bfloat16_immediate_grad_update  False
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   checkpoint_parallel_write_pipeline  False
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   checkpoint_tag_validation_enabled  True
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   checkpoint_tag_validation_fail  False
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f6461e6a3b0>
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   communication_data_type ...... None
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   curriculum_enabled_legacy .... False
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   curriculum_params_legacy ..... False
+[2025-02-28 09:45:01,572] [INFO] [config.py:1005:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   data_efficiency_enabled ...... False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   dataloader_drop_last ......... False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   disable_allgather ............ False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   dump_state ................... False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   dynamic_loss_scale_args ...... None
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_enabled ........... False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_gas_boundary_resolution  1
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_layer_num ......... 0
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_max_iter .......... 100
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_stability ......... 1e-06
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_tol ............... 0.01
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   eigenvalue_verbose ........... False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   elasticity_enabled ........... False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   fp16_auto_cast ............... None
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   fp16_enabled ................. False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   fp16_master_weights_and_gradients  False
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   global_rank .................. 0
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   grad_accum_dtype ............. None
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   gradient_accumulation_steps .. 1
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   gradient_clipping ............ 0.0
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   gradient_predivide_factor .... 1.0
+[2025-02-28 09:45:01,573] [INFO] [config.py:1005:print]   graph_harvesting ............. False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   initial_dynamic_scale ........ 1
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   load_universal_checkpoint .... False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   loss_scale ................... 1.0
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   memory_breakdown ............. False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   mics_hierarchial_params_gather  False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   mics_shard_size .............. -1
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   optimizer_legacy_fusion ...... False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   optimizer_name ............... adam
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   optimizer_params ............. {'lr': 1e-06, 'weight_decay': 0}
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   pld_enabled .................. False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   pld_params ................... False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   prescale_gradients ........... False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   scheduler_name ............... WarmupDecayLR
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   scheduler_params ............. {'warmup_min_lr': 0, 'warmup_max_lr': 1e-06, 'warmup_num_steps': 75, 'total_num_steps': 313}
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   seq_parallel_communication_data_type  torch.float32
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   sparse_attention ............. None
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   sparse_gradients_enabled ..... False
+[2025-02-28 09:45:01,574] [INFO] [config.py:1005:print]   steps_per_print .............. inf
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   tensor_parallel_config ....... dtype=torch.float16 autotp_size=0 tensor_parallel=TPConfig(tp_size=1, tp_grain_size=1, mpu=None, tp_group=None) injection_policy_tuple=None keep_module_on_host=False replace_with_kernel_inject=False
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   timers_config ................ enabled=True synchronized=True
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   train_batch_size ............. 32
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   train_micro_batch_size_per_gpu  8
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   use_data_before_expert_parallel_  False
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   use_node_local_storage ....... False
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   wall_clock_breakdown ......... False
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   weight_quantization_config ... None
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   world_size ................... 4
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   zero_allow_untested_optimizer  False
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=True, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=0.8) sub_group_size=8 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=False module_granularity_threshold=0 use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False zeropp_loco_param=None mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True log_trace_cache_warnings=False
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   zero_enabled ................. True
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   zero_force_ds_cpu_optimizer .. True
+[2025-02-28 09:45:01,575] [INFO] [config.py:1005:print]   zero_optimization_stage ...... 3
+[2025-02-28 09:45:01,575] [INFO] [config.py:991:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    }, 
+    "optimizer": {
+        "type": "Adam", 
+        "params": {
+            "lr": 1e-06, 
+            "weight_decay": 0
+        }
+    }, 
+    "scheduler": {
+        "type": "WarmupDecayLR", 
+        "params": {
+            "warmup_min_lr": 0, 
+            "warmup_max_lr": 1e-06, 
+            "warmup_num_steps": 75, 
+            "total_num_steps": 313
+        }
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "sub_group_size": 8, 
+        "offload_optimizer": {
+            "device": "cpu", 
+            "pin_memory": true, 
+            "ratio": 0.8
+        }
+    }, 
+    "train_batch_size": 32, 
+    "gradient_accumulations": 16, 
+    "train_micro_batch_size_per_gpu": 8, 
+    "prescale_gradients": false, 
+    "gradient_accumulation_steps": 1, 
+    "steps_per_print": inf, 
+    "fp16": {
+        "enabled": false
+    }
+}
+02/28/2025 09:45:01 - INFO - __main__ - ***** Running training *****
+02/28/2025 09:45:01 - INFO - __main__ -   Num examples = 10000
+02/28/2025 09:45:01 - INFO - __main__ -   Num Epochs = 1
+02/28/2025 09:45:01 - INFO - __main__ -   Instantaneous batch size per device = 8
+02/28/2025 09:45:01 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 32
+02/28/2025 09:45:01 - INFO - __main__ -   Gradient Accumulation steps = 1
+02/28/2025 09:45:01 - INFO - __main__ -   Total optimization steps = 313
+  0%|          | 0/313 [00:00<?, ?it/s]input_ids input_ids input_ids input_ids tensor([    1,     1,     2, 34545,  2788,    35, 10179, 21831, 13533, 45586,
+         6504,  1594, 11867, 16134, 39750, 17833,   118,  3410,  4058,  1626,
+         1423,    30, 16134,  1423, 44193,  3194,  3209,   821,  9611,   102,
+         3877, 13337,  1423,   282,   579,   636, 20378,  1180,  2750,   856,
+          219, 16134,  1439,   542,   338, 11108,   605,   524, 32390,   625,
+         4709,  1423,   821,  7325,  1113,  4774,     4, 50118, 29037,   385,
+         7180, 21831, 13533,   412,  5577,   111,  1021, 13093,  1423,   282,
+         4709,  6646,   910,  4183,  3733,  1423,   821,  7325,  1113,  4774,
+          111,  4899, 10738, 26522,   282,  1423,    30, 16134, 39750,    37,
+         7506,   625,  1180,  1423,   282, 25744,   939, 21576,   885, 19237,
+          939,   108,   338,   740, 43237,  5107,   821, 11089,   364,   118,
+          385, 41292, 16541,   939, 21576,     4, 50118,   673,  1187,    30,
+        16134,   181,  2413,     7,  4469,   282,  1021, 13093,   364,   354,
+         8013,   885, 19237,   108,   257,   181,  1506, 18373,  4709, 18124,
+         6646,   821,  7325,  1113,  4774,   412,  5577,   295,  1584,   338,
+         1423,   282,  6545,   605,  2459,  4709, 18124,  6646, 16448,  1439,
+         3877, 13337,     4, 50118,   495,   219, 21831, 13533,   427,  4058,
+         1626,    35,    22,   500, 13434,   108,   282, 47821, 14215,   611,
+         6276,   939,  3877, 13337,     6, 39750, 11614,   417,  6831,  1630,
+        18414, 19302,   208,  1594,   718,     6,   162,  2459,   219, 16134,
+        19267,  4503,  8316,   254,  7180, 16134,  4285,   854,   282,  2459,
+          256, 10456,   282,  4285, 28539,   274,  3644,   524,   364,   257,
+          740,  4550,   282, 10447,  4774,    10,   108,   257,   244,   939,
+          579,   636, 20378,  1180, 28072,  1423,    92,   808, 16448, 11538,
+          571,   385,   271,  5489,   605,  4503,   885, 19237,  8512, 13434,
+        16134, 14628, 13550,   417,  3892,    72, 50118,   448, 48600,    35,
+        13427,   226,   352,   605,  1630,   763,  4774,   230,  8307,  2070,
+          885, 19237, 25744,   939,   821, 10884,  3194,  3209,   821,  9611,
+          102,  1855, 43237,  5107,    92,   219, 16134,   939,  6545,  1506,
+          417,   910,   700,  3019,  4774,  1021,   108,   338,   821,  7325,
+         1113,  4774, 19267,  4503, 16448, 11538,   571,  8316,   254,  7180,
+        16134,  4285,   854,   282,  2459,   256, 10456,   282,     4,     2],
+       device='cuda:1')
+attention_mask tensor([    1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     2, 34545,  2788,
+           35, 10647,     6,   564,     6,   351,     5,  1764,   119,     6,
+          112,     6,   151,   119,     8,   112,     6,  1497,   119,  4694,
+           11, 15859,     6,     5,  1310,     9,  5205,  4365, 10208,    11,
+          777,     4, 50118,   597, 33796,  9446,   261,  5420,  8205, 15964,
+          179,    21,   200,  1374,    71,   442,     5,   112,     6,   151,
+          119,   507,     8,  1298,     5,   112,     6,  1497,   119,   163,
+          507,     4, 50118,  2409,     5,   604,    18, 12937,   165,  9897,
+           66,   798,     7,  2026,  9768,    11,     5,   195,     6,   151,
+          119,  1015,     4, 50118, 26352,   324,    18,  1198,    12,  4162,
+           56,    57, 21757,    30,  1356,     8,    79,    21, 17118,     9,
+           69,  1026,  3393,    88,     5, 24630,     6,    19,     5, 10400,
+           18,  1049,  4374,     7,  4996,    13,     5,   623,  8641,    11,
+         9176,    11,   494,     4, 48600,    35, 32176, 10647,    34,   351,
+            5,  1374,   796,  8641,   765,    12, 16026,  2078, 14303,  1270,
+           71,  1124,    11,    70,    69,  4694,    11,   798,     4,     2],
+       device='cuda:2')
+attention_mask tensor([    1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     2, 34545,  2788,    35,
+         1436,     6,   971,     6,  2419,   237,     7,   158,   107,    11,
+         2878,    71,   145,   303,  2181,     9,  1363,  1940,    19,    10,
+          379,    12,   180,    12,   279,  1816,     4, 50118,   133,  2275,
+          815,   950,    34,    57,  9923,    13,  6901,     5,  1156, 10331,
+          310,    71,    39,  2237,     4, 50118,   387,  4503,   858,     6,
+          834,  1031,   187,  1466,     6,    26,    14,   568,    22,  7325,
+           10,  1473,  5021,  1297,    19,     5,   950,  1271,    35,    22,
+          170,    32,    98,   182,  6661,    13,    42,    72, 50118,  1121,
+           10,   445,     6, 13633,    26,  1436,    18,  1802,    56,    57,
+           22,  5525,  7340,   905,   159,    78,     8, 16501,   113,    30,
+            5,   869,     8,    22, 12724, 34210,  2163,  1297,    53,    67,
+           22,  1409,     5,   950,    51,   323,   845, 50118,   113, 10980,
+         1436, 15005,     7,     5,   950,   131,    37,    67, 15005,     7,
+           84,   841,     8,    51,    33,   358,   235,     7,   619, 28940,
+        29979,    30,    42,    60,    24,   355,     4, 50118, 18801, 20083,
+           16,    45,  2800,    15,    42,  2187, 50118,   133,   950,  3225,
+         3456,   123,    11,   494,   570,    53,  4639,    14,  2020,    71,
+           95,   545,   360,     4, 50118,   894,    21,  2140, 11766,    15,
+            5, 15330,     9,    39,  1500,    94,   353,     6,    77,    37,
+         2641, 26925,     5,  1816,     8,    65,  1427,     9,  1363,  1940,
+            4, 50118,  1121,     5, 29970,   158,   377,     6,    37,   702,
+          971,   498,    13,     5,  1378, 20913,     4, 50118,   387,  4503,
+          858,     6,    54,  1770, 13633,    11,  3010,     6,    26,    11,
+           10,   445,    35,    22, 26412, 35073,     7,    99,    34,    57,
+         2528,     6,    38,   222,    45,  1346,    14,   427,  1436,  3833,
+            7,   464, 48600,    35, 13633,   834,  1031, 10488, 19788,    34,
+         6490,   511,     5,  3086,  1436,   920,  2134,   403,     4,     2],
+       device='cuda:0')
+attention_mask tensor([    1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     1,
+            1,     1,     1,     1,     1,     1,     1,     1,     1,     2,
+        34545,  2788,    35,  4928, 12579,    11,  4815,     8,   575,  2644,
+          420,     5,   382,    33,    57, 23205,  1070,    30,    82,  5609,
+            7,   904,  2166,  5863,     7,     5, 19964,    25,    51,   213,
+          149,     5,  8092,   609,     4, 50118,   487, 41788,  3218,    33,
+         2343,     5,  1795,     9,  1050,  2166,  1511,     6,     8,  1131,
+          813,    33,   303,    14,  9279,  4618,     7,   946,     8,  4543,
+        41491,    62,     7,  7272,   111,  2532,  6970,    50, 42759,     7,
+          106,   111,    34,    10,  1313,  1683,    15,     5, 14354,    29,
+            4, 50118, 10787,  7272,  1930,   688,    50,   377,    11,  1098,
+           25,    51,    32,  9097,    52, 22597,   160,     5,  2196,    51,
+           33,    57,  4924,     7,    11,    49,  8826,   108, 38085,  4311,
+            4,  7411,    51,    32,    45,    19,    49,  1041,     6,    50,
+           49,  8826,    32,  1408,   171,   722,   349,   183,  5190,  1262,
+        11226,  8864,     4, 50118,   113,  4528,  7272,   240,     7,   619,
+          657,     6,  1050,  2842,     8,    10,  3793,  2236,     7,  5863,
+          106,    77,    51,   214,    11,  2400,    60,   161,  2708,  2279,
+         6633,  2160,     6,    10,  9008,  1044,    13,     5, 22239, 14720,
+        12296,   575,  1933,    23, 27648,  3067,   824,    11,  3378,     4,
+        50118,   113,   243,   817,     5,  1041,   619,   357,  4730,    14,
+          190,    77,    51,  1395,    28,   259,    89,    16,   951,     7,
+         3152,     8,   946,    49,  1928,    72, 50118,   113,   243,    16,
+           10, 22445,  2157,    77,   209,  7272,   555, 40817,  1168,   868,
+            4, 50118,   113,  2522,   740,  7027,  7906,   244,    98,     5,
+         7272,   109,    45,  1338,    14,   477,     4,   252,  1339,   106,
+           62,   137,     5,    78, 31754,  1741,    72, 50118,   133,  7272,
+           32,  3606,    31, 36349, 14720, 48600,    35,   468, 39010,  7272,
+         2421, 23311,     7,  2400, 27621,    50,  9892,    32,   145,    98,
+         1242,  4183,   149,    49,    78,  1202,   688,    30,  4618,  1060,
+         6922,  3685,    16,  1622,     7,   740, 20885,   106,     4,     2],
+       device='cuda:3')
+attention_mask tensor([0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1], device='cuda:1')
+labels tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1], device='cuda:2')
+labels tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1], device='cuda:0')
+labels tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1], device='cuda:3')
+labels tensor([ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100, 48600,    35,
+        13427,   226,   352,   605,  1630,   763,  4774,   230,  8307,  2070,
+          885, 19237, 25744,   939,   821, 10884,  3194,  3209,   821,  9611,
+          102,  1855, 43237,  5107,    92,   219, 16134,   939,  6545,  1506,
+          417,   910,   700,  3019,  4774,  1021,   108,   338,   821,  7325,
+         1113,  4774, 19267,  4503, 16448, 11538,   571,  8316,   254,  7180,
+        16134,  4285,   854,   282,  2459,   256, 10456,   282,     4,     2],
+       device='cuda:1')
+tensor([ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100, 48600,    35, 32176, 10647,    34,   351,
+            5,  1374,   796,  8641,   765,    12, 16026,  2078, 14303,  1270,
+           71,  1124,    11,    70,    69,  4694,    11,   798,     4,     2],
+       device='cuda:2')
+tensor([ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100, 48600,    35, 13633,   834,  1031, 10488, 19788,    34,
+         6490,   511,     5,  3086,  1436,   920,  2134,   403,     4,     2],
+       device='cuda:0')
+tensor([ -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,  -100,
+         -100,  -100,  -100,  -100,  -100, 48600,    35,   468, 39010,  7272,
+         2421, 23311,     7,  2400, 27621,    50,  9892,    32,   145,    98,
+         1242,  4183,   149,    49,    78,  1202,   688,    30,  4618,  1060,
+         6922,  3685,    16,  1622,     7,   740, 20885,   106,     4,     2],
+       device='cuda:3')
+02/28/2025 09:45:38 - INFO - __main__ - Max GPU memory usage during training: Max Allocated 17604877312 bytes, Max Reserved 20896022528 bytes
+  0%|          | 1/313 [00:37<3:14:14, 37.35s/it][2025-02-28 09:46:16,582] [WARNING] [stage3.py:2139:step] 4 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+02/28/2025 09:46:16 - INFO - __main__ - Max GPU memory usage during training: Max Allocated 23409746432 bytes, Max Reserved 24624758784 bytes
+  1%|          | 2/313 [01:14<3:14:30, 37.52s/it][2025-02-28 09:46:53,480] [WARNING] [stage3.py:2139:step] 5 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+02/28/2025 09:46:53 - INFO - __main__ - Max GPU memory usage during training: Max Allocated 23409746432 bytes, Max Reserved 24624758784 bytes
+  1%|          | 3/313 [01:51<3:12:23, 37.24s/it][2025-02-28 09:47:28,948] [WARNING] [stage3.py:2139:step] 5 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+02/28/2025 09:47:28 - INFO - __main__ - Max GPU memory usage during training: Max Allocated 23409746432 bytes, Max Reserved 24635244544 bytes
+  1%|▏         | 4/313 [02:27<3:08:10, 36.54s/it][2025-02-28 09:48:04,836] [WARNING] [stage3.py:2139:step] 5 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+02/28/2025 09:48:04 - INFO - __main__ - Max GPU memory usage during training: Max Allocated 23409746432 bytes, Max Reserved 24635244544 bytes
+  2%|▏         | 5/313 [03:03<3:06:21, 36.30s/it][2025-02-28 09:48:39,173] [WARNING] [stage3.py:2139:step] 5 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+02/28/2025 09:48:39 - INFO - __main__ - Max GPU memory usage during training: Max Allocated 23409746432 bytes, Max Reserved 24635244544 bytes
+  2%|▏         | 6/313 [03:37<3:02:20, 35.64s/it][rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 931, in <module>
 [rank2]:     main()
-[rank2]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
-[rank2]:     raw_datasets = load_from_disk(data_dir)
-[rank2]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
-[rank2]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
-[rank2]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
-[rank3]: Traceback (most recent call last):
-[rank3]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 929, in <module>
-[rank3]:     main()
-[rank3]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 401, in main
-[rank3]:     raw_datasets = load_from_disk(data_dir)
-[rank3]:   File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/datasets/load.py", line 2689, in load_from_disk
-[rank3]:     raise FileNotFoundError(f"Directory {dataset_path} not found")
-[rank3]: FileNotFoundError: Directory /data/hangyu/datasets/summarization/xsum_dataset not found
-[rank0]:[W228 03:24:58.463896956 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
-W0228 03:24:59.229000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 737568 closing signal SIGTERM
-W0228 03:24:59.230000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 737569 closing signal SIGTERM
-W0228 03:24:59.230000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 737570 closing signal SIGTERM
-E0228 03:24:59.396000 737527 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 737567) of binary: /home/tangqiansong/conda_file/envs/guaishou/bin/python
+[rank2]:   File "/home/tangqiansong/program_2/run_full_ft_summarization_ds.py", line 785, in main
+[rank2]:     outputs = model(**batch)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank2]:     ret_val = func(*args, **kwargs)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1987, in forward
+[rank2]:     loss = self.module(*inputs, **kwargs)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1845, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1793, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/transformers/models/opt/modeling_opt.py", line 1202, in forward
+[rank2]:     loss = self.loss_function(
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/transformers/loss/loss_utils.py", line 47, in ForCausalLMLoss
+[rank2]:     loss = fixed_cross_entropy(logits, shift_labels, num_items_in_batch, ignore_index, **kwargs)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/transformers/loss/loss_utils.py", line 26, in fixed_cross_entropy
+[rank2]:     loss = nn.functional.cross_entropy(source, target, ignore_index=ignore_index, reduction=reduction)
+[rank2]:   File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/nn/functional.py", line 3494, in cross_entropy
+[rank2]:     return torch._C._nn.cross_entropy_loss(
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 492.00 MiB. GPU 2 has a total capacity of 23.65 GiB of which 352.06 MiB is free. Including non-PyTorch memory, this process has 23.28 GiB memory in use. Of the allocated memory 21.32 GiB is allocated by PyTorch, and 1.29 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W0228 09:48:50.790000 1018077 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1018214 closing signal SIGTERM
+W0228 09:48:50.791000 1018077 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1018215 closing signal SIGTERM
+W0228 09:48:50.793000 1018077 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1018217 closing signal SIGTERM
+E0228 09:48:54.722000 1018077 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 2 (pid: 1018216) of binary: /home/tangqiansong/anaconda3/envs/guaishou/bin/python
 Traceback (most recent call last):
-  File "/home/tangqiansong/conda_file/envs/guaishou/bin/accelerate", line 8, in <module>
+  File "/home/tangqiansong/anaconda3/envs/guaishou/bin/accelerate", line 8, in <module>
     sys.exit(main())
-  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
+  File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 48, in main
     args.func(args)
-  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1157, in launch_command
+  File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1182, in launch_command
     deepspeed_launcher(args)
-  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/launch.py", line 845, in deepspeed_launcher
+  File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/accelerate/commands/launch.py", line 861, in deepspeed_launcher
     distrib_run.run(args)
-  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+  File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
     elastic_launch(
-  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+  File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
     return launch_agent(self._config, self._entrypoint, list(args))
-  File "/home/tangqiansong/conda_file/envs/guaishou/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+  File "/home/tangqiansong/anaconda3/envs/guaishou/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
     raise ChildFailedError(
 torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
 ============================================================
@@ -115,10 +864,10 @@ Failures:
 ------------------------------------------------------------
 Root Cause (first observed failure):
 [0]:
-  time      : 2025-02-28_03:24:59
+  time      : 2025-02-28_09:48:50
   host      : bld
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 737567)
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1018216)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ============================================================
